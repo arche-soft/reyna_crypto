@@ -49,7 +49,7 @@ const Trading = ({ children }) => {
                     </div>
                 } */}
         {/* <ArrowFrame customClass={styles.arrowFrame} /> */}
-        <div className={styles.tradingTitle}>Explore Crypto Marketss::</div>
+        <div className={styles.tradingTitle}>Explore Crypto Markets</div>
         <Divider customClass={styles.divider} />
 
         {/* <Marquee
