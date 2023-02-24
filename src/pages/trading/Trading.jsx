@@ -1,24 +1,20 @@
-import styles from "./trading.module.scss";
+import { useEffect, useState } from "react";
+import Marquee from "react-fast-marquee";
 // import Landing from '../../assets/images/Landing.png'
 // import ArrowFrame from '../../components/arrowframe/ArrowFrame'
 import Divider from "../../components/divider/Divider";
-import Tranding from "../../components/trading/Tranding";
-import { tabData, TrandingData } from "../../constants/data";
 import Tab from "../../components/tab/Tab";
-import Marquee from "react-fast-marquee";
-import Gainers from "../../components/gainers/Gainers";
-import APICall from "../../constants/API";
-import * as API from "../../constants/API";
-import { useEffect } from "react";
-import { useState } from "react";
+import Tranding from "../../components/trading/Tranding";
+import APICall, * as API from "../../constants/API";
+import { tabData } from "../../constants/data";
 import { useGlobalContext } from "../../context/context";
+import styles from "./trading.module.scss";
 
 const Trading = ({ children }) => {
   const [trendingData, setTrendingData] = useState([]);
   const { isModalOpen } = useGlobalContext();
-  
+
   useEffect(() => {
-  
     const intervalCall = setInterval(() => {
       GET_ALL_CRYPTO_CORENCIES();
     }, 5000);
@@ -53,7 +49,7 @@ const Trading = ({ children }) => {
                     </div>
                 } */}
         {/* <ArrowFrame customClass={styles.arrowFrame} /> */}
-        <div className={styles.tradingTitle}>Explore Crypto Market</div>
+        <div className={styles.tradingTitle}>Explore Crypto Marketss::</div>
         <Divider customClass={styles.divider} />
 
         {/* <Marquee
@@ -108,7 +104,7 @@ const Trading = ({ children }) => {
                 </Marquee> */}
         <div className={styles.tabTableContainer}>
           <Tab tabs={tabData} />
-        {children}
+          {children}
           {/* <Gainers /> */}
         </div>
       </div>
